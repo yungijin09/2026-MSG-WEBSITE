@@ -7,16 +7,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="./image/logo.svg" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
   </head>
 
   <body>
     <!-- header -->
     <header>
-      <img
-        src="./image/logo.png"
-        class="header-logo"
-        alt="logo"
-      />
+      <img src="./image/logo.png" class="header-logo" alt="logo" />
 
       <button class="menu-toggle">
         <img src="./image/header-button.svg" class="toggle" />
@@ -57,6 +55,191 @@
       </div>
     </div>
 
+    <button class="floating" onclick="goToPage()">
+      <p>지원하기</p>
+    </button>
+
+    <main class="main">
+      <div class="content-banner">
+        <img
+          src="./image/index/content-banner.jpg"
+          class="banner-img"
+          alt="content-banner"
+        />
+
+        <img
+          src="./image/index/banner-deco-01.png"
+          class="banner-01"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-02.png"
+          class="banner-02"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-03.png"
+          class="banner-03"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-04.png"
+          class="banner-04"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-05.png"
+          class="banner-05"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-06.png"
+          class="banner-06"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-07.png"
+          class="banner-07"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-08.png"
+          class="banner-08"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-09.png"
+          class="banner-09"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-10.png"
+          class="banner-10"
+          alt="banner-deco"
+        />
+        <img
+          src="./image/index/banner-deco-11.png"
+          class="banner-11"
+          alt="banner-deco"
+        />
+      </div>
+    </main>
+
+    <section class="content-about">
+      <div class="about-inner">
+        <!-- M — MAKE -->
+        <div class="about-item about-item--make">
+          <div class="about-circle"></div>
+          <div class="about-logo">
+            <img src="./image/index/logo-deco-01.png" alt="M" />
+          </div>
+          <div class="about-text">
+            <span class="word-en">MAKE</span>
+            <span class="word-ko">만들고</span>
+          </div>
+        </div>
+
+        <!-- S — SHARE -->
+        <div class="about-item about-item--share">
+          <div class="about-circle"></div>
+          <div class="about-text">
+            <span class="word-en">SHARE</span>
+            <span class="word-ko">공유하고</span>
+          </div>
+          <div class="about-logo">
+            <img src="./image/index/logo-deco-02.png" alt="S" />
+          </div>
+        </div>
+
+        <!-- G — GATHER -->
+        <div class="about-item about-item--gather">
+          <div class="about-circle"></div>
+          <div class="about-logo">
+            <img src="./image/index/logo-deco-03.png" alt="G" />
+          </div>
+          <div class="about-text">
+            <span class="word-en">GATHER</span>
+            <span class="word-ko">모으고</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <<div class="content-desc">
+      <h2>
+        <span class="highlight">성장 의지</span>를 가진 사람들이 모여<br />
+        만들어내는 시너지의 힘을 느껴보세요.
+      </h2>
+    
+      <p>
+        온전히 나와 팀의 성장을 위해 노력해본 경험이 있나요?<br />
+        MSG는 열정적인 프로젝트 활동을 통해 서로를 독려하며<br />
+        성장과 변화를 만들어가는 동아리입니다.
+      </p>
+    </div>
+
+    <div class="project-section">
+
+      <div class="project-title">프로젝트</div>
+    
+      <div class="swiper mySwiper">
+    
+        <div class="swiper-wrapper">
+    
+          <!-- 13 -->
+          <div class="swiper-slide">
+            <img class="img-main" src="./image/project/project13.png">
+            <img class="img-side" src="./image/project/13.png">
+    
+            <div class="swiper-content">
+              <div class="slide-grade">13기</div>
+
+              <div class="slide-title">너의 행성은</div>
+
+              <div class="slide-content">
+                사용자의 성격을 행성의 특징에 비유하여 나의 행성을 보여주는 성격 유형 웹 서비스
+              </div>
+            </div>
+          </div>
+
+          <!-- 14 -->
+          <div class="swiper-slide">
+            <img class="img-main" src="./image/project/project14.png">
+            <img class="img-side" src="./image/project/14.png">
+    
+            <div class="swiper-content">
+              <div class="slide-grade">14기</div>
+              <div class="slide-title">난 너 없이</div>
+              <div class="slide-content">
+                환승연애 등장인물로 알아보는 나의 연애 유형테스트
+              </div>
+            </div>
+          </div>
+    
+          <!-- 15 -->
+          <div class="swiper-slide">
+            <img class="img-main" src="./image/project/project15.png">
+            <img class="img-side" src="./image/project/15.png">
+    
+            <div class="swiper-content">
+              <div class="slide-grade">15기</div>
+
+              <div class="slide-title">그대들 어떤 캐릭터처럼 살 것인가</div>
+
+              <div class="slide-content">
+                지브리 등장인물로 알아보는 나의 성격유형테스트
+              </div>
+            </div>
+          </div>
+    
+        </div>
+    
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+      </div>  
+    </div>
+
     <!-- footer -->
     <footer>
       <div class="footer-menu">
@@ -85,5 +268,8 @@
       </div>
       <div class="footer-copyright">COPYRIGHT ⓒ MSG. ALL RIGHTS RESERVED</div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
