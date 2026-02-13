@@ -454,3 +454,132 @@
   font-size: 22px !important;
   font-weight: 1;
 }
+
+.activity{
+  width: 100%;
+  padding: 70px 0 90px;   /* ✅ 좌우 padding 제거 */
+  background: #fff;
+}
+
+.activity_wrap{
+  width: 100%;
+  max-width: 1200px;      /* ✅ 헤더 컨테이너랑 같은 값 */
+  margin: 0 auto;         /* ✅ 중앙 컨테이너(대부분 헤더도 이런 구조) */
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 60px;
+  row-gap: 40px;
+}
+
+/* LEFT */
+.activity_left{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.activity_label{
+  font-family: 'GMarketSans';
+  font-size: 48px;
+  font-weight: 500;
+  color: #608DFF;
+  margin-bottom: 26px;
+}
+
+.activity_year{
+  font-family: 'GMarketSans';
+  font-size: 24px;
+  font-weight: 400;
+  color: #424242;
+  margin-bottom: 10px;
+}
+
+.activity_titleRow{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 14px;
+}
+
+.activity_title{
+  font-family: 'GMarketSans';
+  font-size: 64px;
+  font-weight: 400;
+  color: #424242;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.activity_line{
+  flex: 1;
+  height: 3px;
+  background: #000000;
+  opacity: 0.55;
+  transform: translateY(6px);
+}
+
+.activity_sub {
+  font-family: 'GMarketSans';
+  font-size: 21px;
+  font-weight: 400;
+  color: #9e9e9e;
+  margin-bottom: 10px;
+}
+
+.activity_desc {
+  font-family: 'GMarketSans';
+  font-size: 21px;
+  font-weight: 400;
+  color: #9e9e9e;
+}
+
+/* RIGHT HERO IMAGE */
+.activity_top{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.activity_top img{
+  width: 490px;
+  height: 289px;
+  object-fit: cover;
+}
+
+.activity_bottom{
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 140px; /* 마지막이 파란 버튼 */
+  gap: 24px;
+  align-items: stretch;
+}
+
+.activity_bottom img {
+  width: 400px;
+  height: 339px;
+}
+
+/* NEXT BUTTON CARD */
+.activity_next{
+  border: none;
+  background: #608DFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 339px;
+}
+
+.activity_arrow{
+  color: #fff;
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 300;
+  transform: translateX(2px);
+}
