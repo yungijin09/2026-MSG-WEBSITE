@@ -1,0 +1,109 @@
+.faq-list {
+    max-width: 1354px;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    margin-bottom: 38px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    box-shadow:
+        0 0 10px 0 rgba(0, 11, 39, 0.08);
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.main-text {
+    font-family: 'GMarketSans';
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 72px;
+    margin-bottom: 64px;
+    color: rgba(96, 141, 255, 1);
+}
+
+.question-text {
+    font-family: 'Pretendard';
+    color: rgba(48, 107, 255, 1);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.question-row {
+    margin-top: 29.5px;
+    margin-bottom: 29.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.answer-row {
+    height: 100%;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    padding-left: 8px;
+}
+
+.arrow-icon {
+    transition: 0.3s ease-out;
+}
+
+.answer-text {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    color: rgba(40, 48, 67, 1);
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.answer-text strong {
+    font-weight: 700;
+}
+
+.subText {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: auto;
+    text-align: center;
+    margin-top: 64px;
+    color: rgba(102, 168, 255, 1);
+}
+
+.ask-button {
+    display: flex;
+    background:
+        linear-gradient(-83deg,
+            rgba(96, 141, 255, 1) 0%,
+            rgba(71, 190, 255, 1) 55%,
+            rgba(102, 168, 255, 1) 100%) padding-box,
+
+        linear-gradient(-90deg,
+            rgba(90, 154, 255, 1) 0%,
+            rgba(48, 107, 255, 1) 100%) border-box;
+    width: 214px;
+    height: 64px;
+    margin: 0 auto;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 40px;
+    margin-bottom: 200px;
+}
+
+.ask-text {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+}
