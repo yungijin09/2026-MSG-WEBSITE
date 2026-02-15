@@ -1,0 +1,118 @@
+main { 
+    position: relative;
+    min-height: var(--page-height); 
+    min-height: 960px;
+}
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10px);
+}
+.circle1 {
+    width: 771px;
+    height: 771px;
+    background: radial-gradient(circle, rgba(96,142,255, 50%) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -230px;
+    left: 35px;
+    
+  }
+  
+  .circle2 {
+    width: 759px;
+    height: 759px;
+    background: radial-gradient(circle, rgba(75,162,255, 40%) 0%, rgba(108,139,255,0) 70%);
+    bottom: 120px;
+    left: 1324px;
+  }
+  
+  .circle3 {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(71,190,255, 60%) 0%, rgba(255, 255, 255, 0) 70%);
+    bottom: -350px;
+    left: 310px;
+  }
+  .AC-logo{
+    position: absolute;
+    width: 253px;
+    height: 205px;
+    top: 230px;
+    left: 780px;
+  }
+  .gray{
+    color: #747474;
+  }
+  .blue_make{
+    color: #608DFF;
+  }
+  .blue_share{
+    color: #4BA2FF;
+  }
+  .blue_gather{
+    color: #47BEFF;
+  }
+  .text_large {
+    font-family: 'GMarketSans', sans-serif !important;
+    font-size: 60px;
+    font-weight: 700 !important;
+    
+  }
+  
+.text1{
+    position: absolute;
+    left: 550px;
+    top: 190px;
+  }
+.text3{
+  position: absolute;
+  left: 580px;
+  top: 470px;
+}
+.text2{
+  position: absolute;
+  left: 1105px;
+  top: 300px;
+}
+.text_Korean{
+    font-family: 'SF Pro' !important;
+    font-size: 24px;
+    font-weight: 500;
+    position: absolute;
+    letter-spacing: 1px;
+    top: 70px;
+}
+.text-left{
+    position: absolute;
+    left: 3px;
+}
+.text-right{
+    position: absolute;
+    right: 3px;
+}
+.comment1{
+    font-family: 'Pretendard';
+    font-size: 38px;
+    font-weight: 500;
+    color: #608DFF;
+    position: absolute;
+    top: 630px;
+    left: 700px;
+} 
+.comment-s{
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-size: 19px;
+    color: #747474;
+    position: absolute;
+    top: 690px;
+    left: 755px;
+}
+.comment3{
+    position: absolute;
+    top: 720px;
+    left: 845px;
+    position: absolute;
+}
+.comment { 
+    line-height: 1.5; 
+}
