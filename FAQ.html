@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Share Gather MSG</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./image/logo.svg" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/FAQ.css" />
+</head>
+
+
+<body>
+    <!-- header -->
+    <header>
+        <img src="./image/logo.png" class="header-logo" alt="logo" />
+
+        <button class="menu-toggle">
+            <img src="./image/header-button.svg" class="toggle" />
+        </button>
+
+        <nav class="nav-menu">
+            <ul>
+                <li>
+                    <a href="./index.html" class="header-menu">MSG 소개</a>
+                    <a href="./project.html" class="header-menu">프로젝트</a>
+                    <a href="./activity.html" class="header-menu">활동</a>
+                    <a href="./member.html" class="header-menu">부원</a>
+                    <a href="./FAQ.html" class="header-menu">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메뉴 페이지 -->
+    <div class="faq-list">
+        <p class="main-text">F A Q</p>
+        <div class="faq-item" onclick="toggle('arrow1', 'answer1')">
+            <div class="question-row">
+                <span class="question-text">Q. MSG는 어떤 동아리인가요?</span>
+                <img src="./image/arrow-icon.svg" id="arrow1" class="arrow-icon">
+            </div>
+            <div class="answer-row" id="answer1" style="max-height: 0px;">
+                <span class="answer-text">
+                    A. MSG(Make Share Gather)는 디자인과와 소프트웨어과 학생들이 함께 모여
+                    <br>
+                    아이디어를 만들고, 결과물을 공유하며, 성장을 위해 모이는 전공 연합 동아리입니다.
+                    <br>
+                    디자인과 개발이 만나 하나의 프로젝트를 완성해 나가는 과정 속에서 각자의 전공 역량은 물론, 협업하는 힘까지 자연스럽게 키울 수 있습니다.
+                    <br>
+                    팀 프로젝트, 공모전 도전, 전공 스터디, 다양한 제작 활동을 통해 서로에게 자극이 되고, 함께 고민하며 더 나은 결과물을 만들어갑니다.
+                    <br>
+                    <br>
+                    <strong>MSG는 실력을 쌓는 공간이자, 같은 꿈을 가진 친구들과 함께 성장하는 곳</strong>입니다.
+                    <br>
+                    혼자가 아닌 함께 만드는 즐거움, MSG에서 경험해 보세요.
+                </span>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggle('arrow2', 'answer2')">
+            <div class="question-row">
+                <span class="question-text">Q. MSG에서는 어떤 활동을 하나요?</span>
+                <img src="./image/arrow-icon.svg" id="arrow2" class="arrow-icon">
+            </div>
+            <div class="answer-row" id="answer2" style="max-height: 0px">
+                <span class="answer-text">
+                    MSG의 활동은 ‘만들기’에 중심을 두고 있습니다.
+                    <br>
+                    디자인과는 기획, UI·UX, 그래픽 작업을 맡고, 소프트웨어과는 기능 구현과 개발을 담당하며 하나의 결과물을 완성합니다.
+                    <br>
+                    이외에도 공모전 참가, 전공 스터디, 아이디어 공유 시간, 결과물 피드백 등 다양한 활동을 통해 실력을 체계적으로 쌓아갑니다.
+                </span>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggle('arrow3', 'answer3')">
+            <div class="question-row">
+                <span class="question-text">Q. 전공 실력이 많이 부족한데 지원해도 괜찮을까요?</span>
+                <img src="./image/arrow-icon.svg" id="arrow3" class="arrow-icon">
+            </div>
+            <div class="answer-row" id="answer3" style="max-height: 0px;">
+                <span class="answer-text">
+                    A. 괜찮습니다. MSG는 이미 잘하는 사람만을 위한 동아리가 아닙니다.
+                    <br>
+                    배우고 싶어 하는 마음과, 끝까지 해보려는 태도를 더 중요하게 생각합니다.
+                    <br>
+                    프로젝트를 하면서 자연스럽게 배우고, 선후배와 팀원들의 도움을 받으며 실력을 키워 나갈 수 있는 환경을 만들어 가고 있습니다.
+                </span>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggle('arrow4', 'answer4')">
+            <div class="question-row">
+                <span class="question-text">Q. 동아리 활동이 학업에 부담이 되지는 않나요?</span>
+                <img src="./image/arrow-icon.svg" id="arrow4" class="arrow-icon">
+            </div>
+            <div class="answer-row" id="answer4" style="max-height: 0px;">
+                <span class="answer-text">
+                    A. MSG는 학업과 병행하는 것을 기본으로 생각합니다.
+                    <br>
+                    활동 일정은 팀원들과 충분히 조율하며 진행하고, 무리한 일정이나 강요는 지양합니다.
+                    <br>
+                    서로 배려하며 꾸준히 참여할 수 있는 분위기를 중요하게 여깁니다.
+                </span>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggle('arrow5', 'answer5')">
+            <div class="question-row">
+                <span class="question-text">Q. MSG에 들어오면 어떤 경험을 얻을 수 있나요?</span>
+                <img src="./image/arrow-icon.svg" id="arrow5" class="arrow-icon">
+            </div>
+            <div class="answer-row" id="answer5" style="max-height: 0px;">
+                <span class="answer-text">
+                    A. 전공 실력 향상은 물론, 실제로 ‘완성된 결과물’을 만들어 본 경험을 얻을 수 있습니다.
+                    <br>
+                    프로젝트 경험은 포트폴리오로도 활용할 수 있고,협업 과정에서 소통 능력과 문제 해결 능력도 함께 성장하게 됩니다.
+                    <br>
+                    무엇보다 같은 목표를 가진 친구들과 함께 도전해 본 경험이 큰 자산이 됩니다.
+                </span>
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggle('arrow6', 'answer6')">
+            <div class="question-row">
+                <span class="question-text">Q. MSG는 어떤 사람에게 잘 맞는 동아리인가요?</span>
+                <img src="./image/arrow-icon.svg" id="arrow6" class="arrow-icon">
+            </div>
+            <div class="answer-row" id="answer6" style="max-height: 0px;">
+                <span class="answer-text">
+                    A. 혼자서도 열심히 하지만 
+                    <br>
+                    함께 만들 때 더 즐거운 사람, 아이디어를 말로만 끝내지 않고 직접 만들어 보고 싶은 사람, 전공을 살려 의미 있는 결과물을 남기고 싶은 사람이라면
+                    <br>
+                    MSG는 분명 잘 맞는 동아리입니다.
+                </span>
+            </div>
+        </div>
+
+        <p class="subText">MSG에 대한 질문이 더 있다면?</p>
+        <div class="ask-button">
+            <a href="https://asked.kr/MirimStudy">
+                <span class="ask-text">MSG 에스크</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-menu">
+            <ul>
+                <li>
+                    <a href="./index.html" class="footer-menu-item">MSG 소개</a>
+                    <a href="./project.html" class="footer-menu-item">프로젝트</a>
+                    <a href="./activity.html" class="footer-menu-item">활동</a>
+                    <a href="./member.html" class="footer-menu-item">부원</a>
+                    <a href="./FAQ.html" class="footer-menu-item">F A Q</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-connect">
+            <a class="president" href="https://www.instagram.com/slee_0115/">15기 부장 이상연</a>010-8373-4692
+            <br />
+            <a class="president" href="https://www.instagram.com/minn__nnii/">16기 부장 이유민</a>010-5015-8549
+        </div>
+        <div class="footer-instagram">
+            <img src="./image/instagram.svg" alt="인스타그램" />
+            <a href="https://www.instagram.com/msg_mirim/">@msg_mirim</a>
+        </div>
+        <div class="footer-copyright">COPYRIGHT ⓒ MSG. ALL RIGHTS RESERVED</div>
+    </footer>
+    <script src="./js/FAQ.js"></script>
+</body>
+
+</html>
