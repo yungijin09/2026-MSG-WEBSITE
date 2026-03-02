@@ -1,7 +1,7 @@
-@import url(fonts.css);
+@import url(font.css);
 
 :root {
-
+    /* 변수를 사용할 때는 var(--main-color); 이렇게 사용 */
     --main-font: 'Pretendard';
     --main-font-weight: 400;
 
@@ -15,17 +15,17 @@
     --gray-color-02: #9E9E9E;
     --gray-color-03: #C4C4C4;
 
-
+    /* 헤더 높이 */
     --header-height: 8.43vh;
 
-
+    /* 기본 한 페이지 높이 */
     --page-height: calc(100vh - var(--header-height));
     
-
+    /* 헤더 요소 크기 */
     --header-logo-width: 4.5vh;
     --header-font-size: 2vh;
 
-
+    /* 기본 패딩 크기 */
     --basic-padding: 12.5vw;
     --mobile-padding: 10vw
 }
@@ -887,11 +887,11 @@ footer {
     padding: 0 var(--basic-padding);
     top: 3084px;
 
-
-    left: 0;       
-    width: 100%;       
+    /* ▼ 수정된 부분 ▼ */
+    left: 0;              /* 왼쪽 끝에 고정 */
+    width: 100%;          /* 화면 전체 너비 */
     padding: 0 var(--basic-padding); 
-    box-sizing: border-box;
+    box-sizing: border-box; /* 중요: 패딩을 포함해서 너비를 계산함 */
 }
 
 .footer-menu { padding: 7vh 0; }
@@ -959,5 +959,4 @@ font-size: 24px;
 
 html, body {
     overflow-x: hidden !important;
-
 }
