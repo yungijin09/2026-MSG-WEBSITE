@@ -23,12 +23,21 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #608DFF;
+    opacity: 0.9;
+    /* 기본 상태는 연한 색으로 설정 */
+    background-color: #a3c2ff; /* 밝은 파란색 */
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     outline: none;
+    transition: background-color 0.2s;
+}
+
+/* 호버 시 진해진 배경색 */
+.floating:hover {
+    opacity: 1;
+    background-color: #608DFF; /* 원래 색보다 진한 파란색 */
 }
 
 .floating p {
