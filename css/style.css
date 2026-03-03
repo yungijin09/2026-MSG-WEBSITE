@@ -203,7 +203,8 @@ footer {
     padding: 2.3vh 1.2vw;
     z-index: 50;
 
-    animation: blink 1.5s infinite;
+    /* 기존 깜빡임 애니메이션 제거: 호버 시에만 색 변화가 일어나도록 수정 */
+    animation: none;
 
     cursor: pointer;
 }
