@@ -4,6 +4,31 @@
     overflow-x: hidden;
 }
 
+img {
+  -webkit-user-drag: none;
+    user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/* 스무스 스크롤 전역 적용 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 헤더 높이만큼 오프셋 (섹션이 헤더에 가리지 않게) */
+#section-project,
+#section-activity,
+#section-member {
+  scroll-margin-top: var(--header-height);
+}
+
+/* 화살표 버튼 텍스트 추가 */
+.activity_arrow::after {
+  content: "›";
+}
+
 .body {
   overflow-x: hidden;
 }
@@ -242,18 +267,18 @@
 
   /* M 뒤 — deco-circle-01 (보라) */
   .about-item--make .about-circle {
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     background: url('/image/index/deco-circle-01.png') center / cover no-repeat;
-    top: 50%;
-    left: 14%;
+    top: 40%;
+    left: 18%;
     transform: translate(-50%, -50%);
 }
 
   /* S 뒤 — deco-circle-02 (노랑) */
   .about-item--share .about-circle {
-    width: 450px;
-    height: 450px;
+    width: 750px;
+    height: 750px;
     background: url('/image/index/deco-circle-02.png') center / cover no-repeat;
     top: 50%;
     right: 14%;
@@ -263,8 +288,8 @@
 
   /* G 뒤 — deco-circle-03 (파랑) */
   .about-item--gather .about-circle {
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     background: url('/image/index/deco-circle-03.png') center / cover no-repeat;
     top: 50%;
     left: 14%;
@@ -280,9 +305,25 @@
 
   .about-logo img {
     display: block;
-    width: 220px;
+    width: 350px;
     height: auto;
     will-change: transform;
+}
+
+/* S — 우측 */
+.about-item--share {
+    justify-content: flex-end;
+    margin-top: 100px;  /* 여기 조정 */
+}
+
+/* G — 좌측 */
+.about-item--gather {
+    justify-content: flex-start;
+    margin-top: 100px;  /* 여기 조정 */
+}
+
+.about-item--share .about-logo img {
+    width: 377px;
 }
 
   /* ---- 텍스트 그룹 ---- */
@@ -294,40 +335,55 @@
     flex-direction: column;
     gap: 6px;
     margin-left: 28px;
+    font-size: 350px;
+}
+
+.about-item--make .about-text {
+    margin-left: -140px;
+    margin-top: 150px;
+    margin-right: -160px;
+    text-align: left;
 }
 
   /* SHARE 아이템은 텍스트가 글자 왼쪽 */
   .about-item--share .about-text {
     margin-left: 0;
-    margin-right: 28px;
-    order: -1;
+    margin-top: 120px;
+    margin-right: -160px;
     text-align: right;
 }
 
+  .about-item--gather .about-text {
+    margin-left: -100px;
+    margin-top: 150px;
+    margin-right: 0px;
+    text-align: left;
+}
+
   .about-text .word-en {
-    font-size: clamp(28px, 3.5vw, 82px);
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
     color: #747474;
     line-height: 1;
 }
 
   .about-text .word-ko {
-    font-size: clamp(12px, 1.2vw, 26px);
+    font-size: 22px;
     font-weight: 300;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.02em;
     color: #747474;
     margin-left: 5px;;
 }
 
 .content-desc {
   text-align: center;
-  margin-top: 25px;
+  margin-top: 120px;
 }
 
 .content-desc h2 {
   font-family: 'GMarketSans';
-  font-size: 46px;
+  font-size: 36px;
   font-weight: 500;
   line-height: 1.5;
   color: #424242;
@@ -336,7 +392,7 @@
 
 .content-desc p {
   font-family: 'Pretendard';
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.9;
   color: #9e9e9e;
 }
@@ -372,7 +428,7 @@
   margin-top: 400px;
   font-family: 'GMarketSans';
   font-weight: 500;
-  font-size: 48px;
+  font-size: 40px;
   color: #608DFF;
   display: flex;
   align-items: center;
@@ -380,7 +436,7 @@
 }
 
 .project-section {
-  overflow: hidden; /* ✅ 여기에 추가 */
+  overflow: hidden;
   background-image: url('/image/activity/Group\ 483.png'); /* ✅ 실제 경로로 변경 */
   background-position: center 75%;
   background-repeat: no-repeat;
@@ -406,8 +462,8 @@
 }
 
 .img-main {
-  width: 820px;
-  height: 680px;
+  width: 600px;
+  height: 500px;
   object-fit: contain;
 
   position: relative;
@@ -491,21 +547,21 @@
 /* 텍스트 스타일 */
 .slide-grade {
   color: #b0b0b0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   margin-bottom: 14px;
 }
 
 .slide-title {
   color: #424242;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 32px;
   margin-bottom: 16px;
 }
 
 .slide-content {
   color: #b0b0b0;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 20px;
   white-space: nowrap;      /* 한 줄 유지 */
   line-height: 1.6;
@@ -542,6 +598,8 @@
   width: 100%;
   padding: 60px 0 80px;
   background: #fff;
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 
 .activity_wrap {
@@ -606,16 +664,16 @@
 .activity_sub {
   font-family: 'Pretendard';
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 300;
   color: #9e9e9e;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   margin-top: 30px;
 }
 
 .activity_desc {
   font-family: 'Pretendard';
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 300;
   color: #9e9e9e;
 }
 
@@ -679,6 +737,8 @@
   width: 100%;
   background: #fff;
   padding: 60px 0 80px;
+  transform: scale(0.85);
+  transform-origin: top center;
 }
 
 .award-wrap{
@@ -710,7 +770,7 @@
 
 /* ✅ 진짜 스크롤 박스 */
 .reward-scrollArea{
-  height: 500px;          /* 🔥 여기 높이만 네 디자인에 맞게 조절 */
+  height: 700px;          /* 🔥 여기 높이만 네 디자인에 맞게 조절 */
   left: -100px;
   overflow-y: auto;
   padding-right: 12px;    /* 스크롤바랑 내용 겹치지 않게 */
@@ -762,10 +822,11 @@
 }
 
 .award-trophy{
+  transform: scale(1);
   position: absolute;
-  right: -245px;   /* 🔥 오른쪽으로 삐져나오게 */
-  width: 1000px;
-  height: 1000px;
+  right: -265px;   /* 🔥 오른쪽으로 삐져나오게 */
+  width: 650px;
+  height: 850px;
   top: 220px;
   pointer-events: none;
   user-select: none;
@@ -917,6 +978,7 @@
   background: #fff;
   padding: 110px 0 120px;
   overflow: hidden; /* ✅ 밖으로 나가는 카드 숨김 */
+  transform-origin: top center;
 }
 
 .member-title{
@@ -942,7 +1004,7 @@
 /* 실제로 움직이는 트랙 */
 .member-track{
   display: flex;
-  gap: 24px;
+  gap: 13px;
   width: max-content;
   will-change: transform;
   animation: memberScroll 28s linear infinite;
@@ -959,39 +1021,39 @@
 }
 
 .member-15th{
-  width: 570px;
-  min-height: 263px;   /* 최소만 유지 */
+  width: 400px;                 /* 약 70% */
+  min-height: 184px;            /* 약 70% */
   height: auto; 
   border: 1.6px solid var(--cardBorder);
   border-radius: 16px;
   background: #fff;
   display: grid;
-  grid-template-columns: 204px 1fr; /* ✅ 사진 폭과 동일 */
-  column-gap: 32px;
+  grid-template-columns: 142px 1fr; /* 사진도 70%로 축소 */
+  column-gap: 22px;             /* 32px * 0.7 ≃ 22px */
   align-items: center;
-  padding: 24px 28px;              /* ✅ 카드 안 여백 예쁘게 */
+  padding: 17px 20px;           /* 24x28 → 약 17x20 */
   box-shadow: 0 8px 16px rgba(0,0,0,.06); 
 }
 
 .member-16th{
-  width: 570px;
-  min-height: 263px;   /* 최소만 유지 */
+  width: 400px;
+  min-height: 184px;   /* 약 70% */
   height: auto; 
   border: 1.6px solid var(--cardBorder);
   border-radius: 16px;
   background: #fff;
   display: grid;
-  grid-template-columns: 204px 1fr; /* ✅ 사진 폭과 동일 */
-  column-gap: 32px;
+  grid-template-columns: 142px 1fr; /* 사진도 축소 */
+  column-gap: 22px;
   align-items: center;
-  padding: 24px 28px;           /* ✅ 카드 안 여백 예쁘게 */
+  padding: 17px 20px;           /* 카드 안 여백 */
   margin-bottom: 300px;
   box-shadow: 0 8px 16px rgba(0,0,0,.06); 
 }
 
 .member-photo{
-  width: 204px;
-  height: 204px;
+  width: 142px;   /* 204px × 0.7 */
+  height: 142px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -1003,22 +1065,22 @@
 
 .member-role{
   font-family: 'Pretendard';
-  font-size: 18px;
+  font-size: 13px; /* 약 70% */
   color: #9e9e9e;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .member-name{
   font-family: 'Pretendard';
-  font-size: 24px;
+  font-size: 17px;    /* 약 70% */
   font-weight: 600;
   color: #424242;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .member-desc{
   font-family: 'Pretendard';
-  font-size: 21px;
+  font-size: 15px; /* 약 70% */
   color: #424242;
   line-height: 1.35;
   margin: 0;
@@ -1051,7 +1113,6 @@
 .member-16th:hover {
   background: #608DFF;
   box-shadow: 0 10px 22px rgba(96,141,255,.18);
-  transform: translateY(-2px);
 }
 
 .member-15th:hover .member-name,

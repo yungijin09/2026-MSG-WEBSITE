@@ -21,28 +21,28 @@
       </button>
 
       <nav class="nav-menu">
-        <ul>
-          <li>
-            <a href="./index.html" class="header-menu">MSG 소개</a>
-            <a href="./project.html" class="header-menu">프로젝트</a>
-            <a href="./activity.html" class="header-menu">활동</a>
-            <a href="./member.html" class="header-menu">부원</a>
-            <a href="./FAQ.html" class="header-menu">FAQ</a>
-          </li>
-        </ul>
-      </nav>
+  <ul>
+    <li>
+      <a href="./index.html" class="header-menu" id="nav-logo-text">MSG 소개</a>
+      <a href="#section-project" class="header-menu" id="nav-project">프로젝트</a>
+      <a href="#section-activity" class="header-menu" id="nav-activity">활동</a>
+      <a href="#section-member" class="header-menu" id="nav-member">부원</a>
+      <a href="./FAQ.html" class="header-menu">FAQ</a>
+    </li>
+  </ul>
+</nav>
     </header>
 
     <div class="menu-page">
       <div class="menu-header" onclick="navigateToPage()">
-        <img src="./image/logo.svg" alt="로고" />
+      <a href="./index.html"><img src="./image/logo.png" class="header-logo" alt="logo" /></a>
       </div>
 
       <div class="menu-content">
         <a href="./index.html" class="menu-item">MSG 소개</a>
-        <a href="./project.html" class="menu-item">프로젝트</a>
-        <a href="./activity.html" class="menu-item">활동</a>
-        <a href="./member.html" class="menu-item">부원</a>
+        <a href="#section-project" class="menu-item">프로젝트</a>
+        <a href="#section-activity" class="menu-item">활동</a>
+        <a href="#section-member" class="menu-item">부원</a>
         <a href="./FAQ.html" class="menu-item">FAQ</a>
       </div>
 
@@ -54,9 +54,9 @@
       </div>
     </div>
 
-    <button class="floating" onclick="goToPage()">
+    <!-- <button class="floating" onclick="goToPage()">
       <p>지원하기</p>
-    </button>
+    </button> -->
 
     <main class="main">
       <div class="content-banner">
@@ -196,7 +196,7 @@
       </p>
     </div>
 
-    <div class="project-section">
+    <div class="project-section" id="section-project">
 
       <div class="project-title">프로젝트</div>
     
@@ -258,7 +258,7 @@
       </div>  
     </div>
 
-    <section class="activity">
+    <section class="activity" id="section-activity">
       <div class="activity_wrap">
     
         <!-- LEFT TEXT -->
@@ -279,7 +279,6 @@
             지브리 등장인물로 알아보는 성격유형테스트 “그대들 어떤 캐릭터처럼 살 것인가” 를 제작했습니다.
           </div>
         </div>
-
         <div class="activity_top">
           <img src="/image/activity/itshow01.jpg" alt="itshow" />
         </div>
@@ -381,6 +380,7 @@
       </div>
     </div>
 
+    <section class="member" id="section-member">
       <h2 class="member-title">팀원소개</h2>
     
       <p class="member-grade">15기</p>
@@ -495,7 +495,7 @@
           </article>
         </div>
       </div>  
-
+    </section>
     <!-- footer -->
     <footer>
       <div class="footer-menu">

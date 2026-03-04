@@ -169,9 +169,9 @@ document.querySelectorAll(".member-track").forEach((track) => {
 // 로고 데코 이미지 둥실둥실 애니메이션 + 호버 시 크기 확대
 (function initLogoDecoFloat() {
   const decos = [
-    { el: document.querySelector(".about-item--make .about-logo img"),   amplitude: 12, period: 6200, phase: 0 },
-    { el: document.querySelector(".about-item--share .about-logo img"),  amplitude: 9,  period: 7800, phase: Math.PI * 0.7 },
-    { el: document.querySelector(".about-item--gather .about-logo img"), amplitude: 15, period: 5500, phase: Math.PI * 1.4 },
+    { el: document.querySelector(".about-item--make .about-logo img"),   amplitude: 12, period: 3200, phase: 0, offsetX: -165},
+    { el: document.querySelector(".about-item--share .about-logo img"),  amplitude: 9,  period: 3800, phase: Math.PI * 0.7, offsetX: 200},
+    { el: document.querySelector(".about-item--gather .about-logo img"), amplitude: 11, period: 3500, phase: Math.PI * 1.4, offsetX: -160 },
   ];
 
   const targets = decos.filter(d => d.el !== null);
@@ -206,10 +206,19 @@ document.querySelectorAll(".member-track").forEach((track) => {
   function tick(timestamp) {
     targets.forEach(d => {
       const y = d.amplitude * Math.sin((2 * Math.PI * timestamp) / d.period + d.phase);
-      d.el.style.transform = `translateY(${y}px)`;
+      d.el.style.transform = `translateX(${d.offsetX}px) translateY(${y}px)`;
     });
     requestAnimationFrame(tick);
   }
 
   requestAnimationFrame(tick);
 })();
+
+// MSG 소개 클릭 → 최상단으로 스크롤
+const navLogoText = document.getElementById("nav-logo-text");
+if (navLogoText) {
+  navLogoText.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
