@@ -13,7 +13,7 @@ observer.observe(highlight);
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   centeredSlides: true,
-  loop: false,      // ✅ loop 끄기
+  loop: false,
   spaceBetween: 200,
   watchSlidesProgress: true,
 
