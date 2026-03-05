@@ -233,7 +233,7 @@ if (navProject) {
     const section = document.getElementById("section-project");
     if (section) {
       // 프로젝트 제목이 화면 중앙 위로 살짝 더 올라오도록 오프셋을 크게 설정
-      const offsetY = section.offsetTop - -180;
+      const offsetY = section.offsetTop - -150;
       window.scrollTo({ top: offsetY, behavior: "smooth" });
     }
   });
@@ -251,3 +251,69 @@ if (navMember) {
     }
   });
 }
+// 푸터 MSG 소개 클릭 → 최상단으로 스크롤
+const footerLogoText = document.getElementById("footer-logo-text");
+if (footerLogoText) {
+  footerLogoText.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// 푸터 프로젝트 클릭 → 섹션으로 스크롤 (추가 오프셋)
+const footerProject = document.getElementById("footer-project");
+if (footerProject) {
+  footerProject.addEventListener("click", (e) => {
+    e.preventDefault();
+    const section = document.getElementById("section-project");
+    if (section) {
+      const offsetY = section.offsetTop - -150;
+      window.scrollTo({ top: offsetY, behavior: "smooth" });
+    }
+  });
+}
+
+// 푸터 활동 클릭 → 섹션으로 스크롤 (추가 오프셋)
+const footerActivity = document.getElementById("footer-activity");
+if (footerActivity) {
+  footerActivity.addEventListener("click", (e) => {
+    e.preventDefault();
+    const section = document.getElementById("section-activity");
+    if (section) {
+      const offsetY = section.offsetTop - 50;
+      window.scrollTo({ top: offsetY, behavior: "smooth" });
+    }
+  });
+}
+
+// 푸터 부원 클릭 → 섹션으로 스크롤 (추가 오프셋)
+const footerMember = document.getElementById("footer-member");
+if (footerMember) {
+  footerMember.addEventListener("click", (e) => {
+    e.preventDefault();
+    const section = document.getElementById("section-member");
+    if (section) {
+      const offsetY = section.offsetTop - -150;
+      window.scrollTo({ top: offsetY, behavior: "smooth" });
+    }
+  });
+}
+
+// FAQ에서 넘어온 경우 오프셋이 적용된 스크롤 처리
+window.addEventListener("load", () => {
+  const scrollTarget = sessionStorage.getItem("scrollTarget");
+  const scrollOffset = sessionStorage.getItem("scrollOffset");
+  
+  if (scrollTarget && scrollOffset) {
+    const section = document.getElementById(scrollTarget);
+    if (section) {
+      setTimeout(() => {
+        const offsetY = section.offsetTop - parseInt(scrollOffset);
+        window.scrollTo({ top: offsetY, behavior: "smooth" });
+      }, 100);
+    }
+    // 사용 후 sessionStorage 초기화
+    sessionStorage.removeItem("scrollTarget");
+    sessionStorage.removeItem("scrollOffset");
+  }
+});
