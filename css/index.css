@@ -354,7 +354,7 @@ html {
 }
 
 .project-title {
-  margin-top: 400px;
+  margin-top: 300px;
   font-family: 'GMarketSans';
   font-weight: 500;
   font-size: 40px;
@@ -391,8 +391,8 @@ html {
 }
 
 .img-main {
-  width: 600px;
-  height: 500px;
+  width: 2100px;
+  height: 520px;
   object-fit: contain;
 
   position: relative;
@@ -484,14 +484,14 @@ html {
 .slide-title {
   color: #424242;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 25px;
   margin-bottom: 16px;
 }
 
 .slide-content {
   color: #b0b0b0;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   white-space: nowrap;      /* 한 줄 유지 */
   line-height: 1.6;
   display: flex; 
@@ -504,17 +504,17 @@ html {
   top: auto !important;
   bottom: 44px !important;
   width: 19px;
-  height: 38px;
+  height: 45px;
   color: #608DFF;
   z-index: 5;
 }
 
 .swiper-button-prev {
-  left: calc(50% - 260px) !important;
+  left: calc(50% - 330px) !important;
 }
 
 .swiper-button-next {
-  right: calc(50% - 260px) !important;
+  right: calc(50% - 330px) !important;
 }
 
 .swiper-button-prev::after,
@@ -539,7 +539,7 @@ html {
   box-sizing: border-box;
 
   display: grid;
-  grid-template-columns: 1fr 340px;  /* ✅ 오른쪽 고정 너비 */
+  grid-template-columns: 1fr 340px;
   grid-template-rows: auto auto;
   column-gap: 40px;
   row-gap: 30px;
@@ -788,13 +788,29 @@ html {
   --blue:#608DFF;
 }
 
+.global-plane {
+  position: relative; /* 위치 조절을 위한 기준점 설정 */
+  width: 100%;        /* 부모 너비 */
+}
+
+.global-plane img {
+  position: absolute; /* 원하는 곳으로 자유롭게 이동 가능 */
+  width: 1410px;        /* 10px은 너무 작아서 안 보일 수 있으니 조절해보세요 */
+  height: auto;
+  top: 50px;         
+  left: 45px;
+  
+  z-index: 1;         /* 다른 요소보다 위(혹은 아래)로 보낼 때 조정 */
+}
+
+
 .global-title{
-  margin-top: 500px;
+  margin-top: 170px;
   font-family:'GMarketSans';
-  font-size:48px;
+  font-size:40px;
   color:#608DFF;
   text-align:center;
-  margin-bottom:70px;
+  margin-bottom:120px;
 }
 
 .global-row{
@@ -829,6 +845,7 @@ html {
   height:100%;
   border-radius:50%;
   border:2px solid var(--blue);
+  background:#fff;
   position:relative;
   overflow:hidden;
   transition:.35s;
@@ -841,11 +858,9 @@ html {
   display:flex;
   align-items:center;
   justify-content:center;
-
   font-family:'GMarketSans';
-  font-size:32px;
+  font-size:24px;
   color:var(--blue);
-
   transition:.3s;
 }
 
@@ -891,11 +906,12 @@ html {
 
 .back-country{
   font-size:26px;
-  font-weight:600;
+  font-weight:500;
   margin-bottom:16px;
 }
 
 .back-names{
+  margin-top: 25px;
   font-size:14px;
   line-height:1.8;
 }
@@ -904,24 +920,23 @@ html {
   --cardBorder: rgba(96,141,255,.75);
 }
 
-/* 섹션 */
-.member {
+.member{
   width: 100%;
   background: #fff;
   padding: 110px 0 120px;
-  overflow: hidden; /* ✅ 밖으로 나가는 카드 숨김 */
+  overflow: hidden;
   transform-origin: top center;
   margin-bottom: -100px;
 }
 
 .member-title{
   font-family: 'GMarketSans';
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 500;
   color: #608DFF;
   margin-bottom: 26px;
   margin-left: 225px;
-  margin-top: 300px;
+  margin-top: 150px;
 }
 
 /* 마퀴(가로 슬라이드) 컨테이너 */
@@ -980,7 +995,7 @@ html {
   column-gap: 22px;
   align-items: center;
   padding: 17px 20px;           /* 카드 안 여백 */
-  margin-bottom: 300px;
+  margin-bottom: 200px;
   box-shadow: 0 8px 16px rgba(0,0,0,.06); 
 }
 
@@ -1008,7 +1023,7 @@ html {
   font-size: 17px;    /* 약 70% */
   font-weight: 600;
   color: #424242;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
 }
 
 .member-desc{
@@ -1025,9 +1040,9 @@ html {
 
 .member-grade {
   font-family: 'Pretendard';
-  font-size: 24px;
+  font-size: 20px;
   color: #424242;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 30px;
   margin-left: 225px;
 }
