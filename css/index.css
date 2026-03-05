@@ -693,20 +693,20 @@ html {
   font-weight: 400;
   font-size: 48px;
   color: #608DFF;
-  margin-top: 300px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 120px;
   left: -100px;
 }
 
 /* ✅ 진짜 스크롤 박스 */
 .reward-scrollArea{
-  height: 500px;          /* 🔥 여기 높이만 네 디자인에 맞게 조절 */
-  left: -100px;
+  transform: scale(1.35);
+  height: 500px;     
+  width: 100%;
   overflow-y: auto;
-  padding-right: 12px;    /* 스크롤바랑 내용 겹치지 않게 */
-
-  /* 스크롤이 자연스럽게 */
+  padding-right: 12px;   
   overscroll-behavior: contain;
+  margin-left: 130px;
 }
 
 /* ===== TABLE ===== */
@@ -757,16 +757,14 @@ html {
   right: -265px;
   width: 650px;
   height: 850px;
-
-
-  top: 220px;
+  top: 100px;
   pointer-events: none;
   user-select: none;
 }
 
 /* ===== 스크롤바 스타일 (크롬/엣지) ===== */
 .reward-scrollArea::-webkit-scrollbar{
-  width: 8px;
+  width: 1px;
 }
 
 .reward-scrollArea::-webkit-scrollbar-track{
@@ -995,7 +993,7 @@ html {
   column-gap: 22px;
   align-items: center;
   padding: 17px 20px;           /* 카드 안 여백 */
-  margin-bottom: 200px;
+  margin-bottom: 250px;
   box-shadow: 0 8px 16px rgba(0,0,0,.06); 
 }
 
@@ -1021,14 +1019,14 @@ html {
 .member-name{
   font-family: 'Pretendard';
   font-size: 17px;    /* 약 70% */
-  font-weight: 600;
+  font-weight: 500;
   color: #424242;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .member-desc{
   font-family: 'Pretendard';
-  font-size: 15px; /* 약 70% */
+  font-size: 16px; /* 약 70% */
   color: #424242;
   line-height: 1.35;
   margin: 0;
