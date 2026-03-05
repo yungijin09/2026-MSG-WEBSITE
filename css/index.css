@@ -1070,3 +1070,75 @@ html {
 .member-16th:hover .member-desc{
   color:#fff;
 }
+
+#mobile-notice {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #mobile-notice {
+    font-family: 'GMarketSans';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff; 
+    z-index: 9999;
+    text-align: center;
+    padding: 40px;
+  }
+ 
+  .mobile-logo {
+    width: 150px;
+    margin-bottom: 30px;
+    overscroll-behavior: none;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #424242;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #666666;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  body {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+/* ===== 태블릿 반응형 (768px ~ 1024px) ===== */
+@media (max-width: 1024px) and (min-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== 모바일 반응형 (최대 768px) ===== */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  p {
+    font-size: 0.95rem;
+  }
+}
