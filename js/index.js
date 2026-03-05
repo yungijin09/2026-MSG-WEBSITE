@@ -233,7 +233,7 @@ if (navProject) {
     const section = document.getElementById("section-project");
     if (section) {
       // 프로젝트 제목이 화면 중앙 위로 살짝 더 올라오도록 오프셋을 크게 설정
-      const offsetY = section.offsetTop - -180;
+      const offsetY = section.offsetTop - -150;
       window.scrollTo({ top: offsetY, behavior: "smooth" });
     }
   });
