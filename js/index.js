@@ -13,9 +13,10 @@ observer.observe(highlight);
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   centeredSlides: true,
-  loop: false,
+  loop: true,
   spaceBetween: 200,
   watchSlidesProgress: true,
+  initialSlide: 0,
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -221,5 +222,32 @@ if (navLogoText) {
   navLogoText.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// 프로젝트 클릭 → 섹션으로 스크롤 (추가 오프셋)
+const navProject = document.getElementById("nav-project");
+if (navProject) {
+  navProject.addEventListener("click", (e) => {
+    e.preventDefault();
+    const section = document.getElementById("section-project");
+    if (section) {
+      // 프로젝트 제목이 화면 중앙 위로 살짝 더 올라오도록 오프셋을 크게 설정
+      const offsetY = section.offsetTop - -180;
+      window.scrollTo({ top: offsetY, behavior: "smooth" });
+    }
+  });
+}
+
+// 부원 클릭 → 섹션으로 스크롤 (추가 오프셋)
+const navMember = document.getElementById("nav-member");
+if (navMember) {
+  navMember.addEventListener("click", (e) => {
+    e.preventDefault();
+    const section = document.getElementById("section-member");
+    if (section) {
+      const offsetY = section.offsetTop - -150;
+      window.scrollTo({ top: offsetY, behavior: "smooth" });
+    }
   });
 }
