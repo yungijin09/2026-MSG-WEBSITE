@@ -140,73 +140,6 @@ html {
   width: 16%;
 }
 
-/* .content-banner .banner-01,
-.content-banner .banner-02,
-.content-banner .banner-03,
-.content-banner .banner-04,
-.content-banner .banner-05,
-.content-banner .banner-06,
-.content-banner .banner-07,
-.content-banner .banner-08,
-.content-banner .banner-09,
-.content-banner .banner-10,
-.content-banner .banner-11 {
-  position: absolute;
-  pointer-events: none;
-  /* 배너 이미지 위 레이어로 올리기 */
-  /* z-index: 1;
-} */
-
-/* 
-
-.content-banner .banner-02 {
-  top: 67%;
-  left: 60%;
-  width: 8%;
-}
-
-.content-banner .banner-03 {
-  top: 15%;
-  left: 43%;
-  width: 19%;
-}
-
-.content-banner .banner-04 {
-  top: 71%;
-  left: 53%;
-  width: 5%;
-}
-
-.content-banner .banner-05 {
-  top: 72%;
-  left: 27%;
-  width: 17%;
-}
-
-.content-banner .banner-06 {
-  top: 9%;
-  left: 62%;
-  width: 20%;
-}
-
-.content-banner .banner-07 {
-  top: 54%;
-  left: 77%;
-  width: 4%;
-}
-
-.content-banner .banner-10 {
-  top: 60%;
-  left: 13%;
-  width: 9%;
-}
-
-.content-banner .banner-11 {
-  top: 65%;
-  left: 58%;
-  width: 27%;
-} */
-
 .content-about {
     position: relative;
     width: 100%;
@@ -215,7 +148,6 @@ html {
     background: #fff;
 }
 
-  /* 내부 래퍼 — 지그재그 아이템 컨테이너 */
   .about-inner {
     position: relative;
     width: 100%;
@@ -226,7 +158,6 @@ html {
     gap: 0;
 }
 
-  /* ---- 공통 아이템 ---- */
   .about-item {
     position: relative;
     display: flex;
@@ -823,7 +754,7 @@ html {
 .award-trophy{
   transform: scale(1);
   position: absolute;
-  right: -265px;   /* 🔥 오른쪽으로 삐져나오게 */
+  right: -265px;
   width: 650px;
   height: 850px;
 
