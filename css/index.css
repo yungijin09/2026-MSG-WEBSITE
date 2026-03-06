@@ -689,8 +689,17 @@ html {
   font-size: 48px;
   color: #608DFF;
   margin-top: 20px;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   left: -100px;
+}
+
+.reward-sub{
+  font-family: 'Pretendard';
+  font-size: 18px;
+  font-weight: 300;
+  color: #c6c6c6;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 /* ✅ 진짜 스크롤 박스 */
