@@ -867,22 +867,6 @@ html {
   --blue:#608DFF;
 }
 
-.global-plane {
-  position: relative; /* 위치 조절을 위한 기준점 설정 */
-  width: 100%;        /* 부모 너비 */
-}
-
-.global-plane img {
-  position: absolute; /* 원하는 곳으로 자유롭게 이동 가능 */
-  width: 1410px;        /* 10px은 너무 작아서 안 보일 수 있으니 조절해보세요 */
-  height: auto;
-  top: 50px;         
-  left: 45px;
-  
-  z-index: 1;         /* 다른 요소보다 위(혹은 아래)로 보낼 때 조정 */
-}
-
-
 .global-title{
   margin-top: 170px;
   font-family:'GMarketSans';
