@@ -70,6 +70,13 @@ header {
 
 header .header-logo { width: var(--header-logo-width); }
 
+.header-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
 header .header-menu {
     color: var(--black-color-01);
     font-size: var(--header-font-size);
@@ -152,19 +159,51 @@ footer {
     color: #fff;
     background-color: var(--black-color-02);
     padding: 0 var(--basic-padding);
+    max-width: 100%;
 }
 
-.footer-menu { padding: 7vh 0; }
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 5vh 0 3vh;
+    gap: 4vw;
+}
+
+.footer-menu { padding: 0; }
+.footer-menu ul { list-style: none; margin: 0; padding: 0; }
+.footer-menu li { display: flex; flex-wrap: wrap; gap: 0.5em 3vw; }
 .footer-menu a {
-    display: block;
-    margin-top: 3vh;
+    display: inline-block;
     font-size: 2.5vh;
+    padding: 0.3em 0;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+.footer-menu a:hover {
+    color: var(--main-color-01);
+    opacity: 0.95;
 }
 
-.footer-connect { font-size: 2vh; }
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.2em;
+    flex-shrink: 0;
+}
+
+.footer-connect { font-size: 2vh; text-align: right; }
 .footer-connect .president {
     display: inline-block;
     margin: 5px 0;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+.footer-connect .president:hover {
+    color: var(--main-color-01);
+    opacity: 0.95;
 }
 .footer-connect .president::after {
     content: '|';
@@ -174,11 +213,17 @@ footer {
 .footer-instagram {
     display: flex;
     align-items: center;
-    margin: 3em 0;
+    gap: 10px;
+    transition: opacity 0.2s ease;
 }
+.footer-instagram:hover { opacity: 0.9; }
+.footer-instagram a {
+    transition: color 0.2s ease;
+}
+.footer-instagram a:hover { color: var(--main-color-01); }
 .footer-instagram img {
     width: 3.5vh;
-    margin-right: 10px;
+    height: auto;
 }
 
 .footer-copyright {
@@ -243,9 +288,7 @@ footer {
   display: none;
 }
 
-/* 태블릿 및 모바일 버전 */
-@media screen and (max-width: 768px) {
-
+/* 데스크톱이 아닌 화면(태블릿·모바일) → 안내 화면만 표시 */
 @media screen and (max-width: 1024px) {
   #mobile-notice {
     display: flex;
@@ -257,7 +300,8 @@ footer {
     position: fixed;
     inset: 0;
     width: 100%;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
     background: #ffffff;
     z-index: 99999;
 
@@ -268,6 +312,7 @@ footer {
 
   .mobile-logo {
     width: 30%;
+    max-width: 160px;
     height: auto;
   }
 
@@ -288,9 +333,8 @@ footer {
     margin: 0;
   }
 
-  /* PC용 콘텐츠 전체 숨김 */
+  /* 데스크톱용 콘텐츠 전체 숨김 */
   body > *:not(#mobile-notice) {
     display: none !important;
   }
-}
 }

@@ -10,6 +10,32 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(highlight);
 
+// content-desc 멘트 스크롤 시 페이드인 애니메이션
+const contentDesc = document.getElementById("content-desc");
+if (contentDesc) {
+  const descObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        contentDesc.classList.add("animate-in");
+      }
+    });
+  }, { threshold: 0.2 });
+  descObserver.observe(contentDesc);
+}
+
+// 활동 섹션 스크롤 시 자연스럽게 등장
+const activitySection = document.getElementById("section-activity");
+if (activitySection) {
+  const activityObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activitySection.classList.add("animate-in");
+      }
+    });
+  }, { threshold: 0.15 });
+  activityObserver.observe(activitySection);
+}
+
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   centeredSlides: true,
@@ -17,7 +43,10 @@ const swiper = new Swiper(".mySwiper", {
   spaceBetween: 200,
   watchSlidesProgress: true,
   initialSlide: 0,
-
+  speed: 700,
+  resistanceRatio: 0.6,
+  longSwipesRatio: 0.35,
+  grabCursor: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -62,6 +91,8 @@ const activities = [
 
 let currentIndex = 0;
 
+const activityWrap = document.querySelector(".activity_wrap");
+
 function updateActivity() {
   const data = activities[currentIndex];
 
@@ -77,8 +108,15 @@ function updateActivity() {
 }
 
 document.querySelector(".activity_next").addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % activities.length;
-  updateActivity();
+  if (activityWrap.classList.contains("activity-changing")) return;
+
+  activityWrap.classList.add("activity-changing");
+
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % activities.length;
+    updateActivity();
+    activityWrap.classList.remove("activity-changing");
+  }, 350);
 });
 
 const awards = [
@@ -215,6 +253,15 @@ document.querySelectorAll(".member-track").forEach((track) => {
 
   requestAnimationFrame(tick);
 })();
+
+// 헤더 로고 클릭 → 첫 화면으로 스크롤
+const headerLogoLink = document.getElementById("header-logo-link");
+if (headerLogoLink) {
+  headerLogoLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 // MSG 소개 클릭 → 최상단으로 스크롤
 const navLogoText = document.getElementById("nav-logo-text");

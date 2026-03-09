@@ -34,6 +34,19 @@ html {
     position: relative;
     overflow: hidden;
 }
+
+/* 배경이 하얀 화면으로 자연스럽게 이어지도록 그라데이션 오버레이 */
+.content-banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 45%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.4) 40%, #fff 100%);
+    z-index: 1;
+    pointer-events: none;
+}
   
   .banner-img {
     position: absolute;
@@ -141,6 +154,7 @@ html {
     padding: 120px 0 140px;
     overflow: hidden;
     background: #fff;
+    margin-top: -1px; /* 그라데이션과 선 없이 맞닿도록 */
 }
 
   .about-inner {
@@ -303,6 +317,19 @@ html {
 .content-desc {
   text-align: center;
   margin-top: 120px;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.content-desc.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-desc.animate-in .content-desc-line {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .content-desc h2 {
@@ -313,6 +340,31 @@ html {
   color: #424242;
   margin-bottom: 40px;
 }
+
+.content-desc .content-desc-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.content-desc h2 .content-desc-line + .content-desc-line {
+  margin-top: 0.25em;
+}
+
+.content-desc p .content-desc-line {
+  margin-bottom: 0.35em;
+}
+
+.content-desc p .content-desc-line:last-child {
+  margin-bottom: 0;
+}
+
+.content-desc h2 .content-desc-line:nth-child(1) { transition-delay: 0.1s; }
+.content-desc h2 .content-desc-line:nth-child(2) { transition-delay: 0.25s; }
+.content-desc p .content-desc-line:nth-child(1) { transition-delay: 0.4s; }
+.content-desc p .content-desc-line:nth-child(2) { transition-delay: 0.55s; }
+.content-desc p .content-desc-line:nth-child(3) { transition-delay: 0.7s; }
 
 .content-desc p {
   font-family: 'Pretendard';
@@ -376,6 +428,7 @@ html {
 
 .swiper-wrapper {
   align-items: center;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .swiper-slide {
@@ -524,6 +577,14 @@ html {
   background: #fff;
   transform: scale(0.85);
   transform-origin: top center;
+  opacity: 0;
+  transform: scale(0.85) translateY(36px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.activity.animate-in {
+  opacity: 1;
+  transform: scale(0.85) translateY(0);
 }
 
 .activity_wrap {
@@ -601,6 +662,22 @@ html {
   color: #9e9e9e;
 }
 
+/* 활동 화살표 클릭 시 전환 애니메이션 */
+.activity_title,
+.activity_sub,
+.activity_desc,
+.activity_top img,
+.activity_bottom img {
+  transition: opacity 0.35s ease;
+}
+
+.activity_wrap.activity-changing .activity_title,
+.activity_wrap.activity-changing .activity_sub,
+.activity_wrap.activity-changing .activity_desc,
+.activity_wrap.activity-changing .activity_top img,
+.activity_wrap.activity-changing .activity_bottom img {
+  opacity: 0;
+}
 
 .activity_top {
   grid-column: 2 / 3;
