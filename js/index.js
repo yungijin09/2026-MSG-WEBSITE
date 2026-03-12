@@ -120,12 +120,23 @@ document.querySelector(".activity_next").addEventListener("click", () => {
 });
 
 const awards = [
+  // 2026
+  { title: "2026 1학년 2학기 교과우수상", date: "2026.01.22", source: "미림마이스터고" },
+  { title: "2026 2학년 2학기 교과우수상", date: "2026.01.22", source: "미림마이스터고" },
+
+  // 2025
   { title: "학생 스마트기기 활용 학습 사례 공모전 금상", date: "2025.10.31", source: "서울특별시교육청" },
   { title: "학생 마음건강 컨텐츠 공모전 대상", date: "2025.10.22", source: "SK 플래닛(주)" },
+  { title: "2025 1학년 1학기 교과우수상", date: "2025.08.10", source: "미림마이스터고" },
+  { title: "2025 2학년 1학기 교과우수상", date: "2025.08.09", source: "미림마이스터고" },
   { title: "MOS 월드 챔피언쉽 장려상", date: "2025.07.21", source: "YBM" },
   { title: "창의 아이디어 경진대회 은상", date: "2025.07.02", source: "미림마이스터고" },
+  { title: "2025 1학년 2학기 교과우수상", date: "2025.01.23", source: "미림마이스터고" },
+
+  // 2024
   { title: "미림 해커톤 우수상", date: "2024.10.19", source: "미림마이스터고" },
   { title: "뉴미디어디자인 어워드", date: "2024.10.04", source: "미림마이스터고" },
+  { title: "2024 1학년 1학기 교과우수상", date: "2024.08.09", source: "미림마이스터고" },
   { title: "창의 아이디어 경진대회 금상", date: "2024.07.08", source: "미림마이스터고" },
   { title: "창의 아이디어 경진대회 은상", date: "2024.07.08", source: "미림마이스터고" },
   { title: "APP JAM 장려상", date: "2024.06.23", source: "SK 플래닛(주)" },
@@ -141,10 +152,14 @@ function populateAwards() {
       const highlightKeywords = ["장려상","대상","2위, 3위","우수상", "가작상", "금상", "은상", "동상"];
       
       highlightKeywords.forEach(keyword => {
+          if (keyword === "우수상" && title.includes("교과우수상")) {
+            return;
+          }
+
           if (title.includes(keyword)) {
               title = title.replace(
                   keyword,
-                  `<span style="color: ${highlightColor}; font-weight: bold;">${keyword}</span>`
+                  `<span style="color: ${highlightColor}; font-weight: 400; font-size: 0.88em;">${keyword}</span>`
               );
           }
       });
